@@ -12,8 +12,9 @@ public class Allocator {
     private static List<Object> lockList = new ArrayList<>();
 
     public synchronized void apply(Object... locks) throws InterruptedException {
+        System.out.println(locks[0].toString() + "申请资源");
         for (Object lock : locks) {
-            if (lockList.contains(lock)) {
+            while (lockList.contains(lock)) {
                 System.out.println(lock.toString() + "已被占用, 进入等待队列");
                 wait();
             }
