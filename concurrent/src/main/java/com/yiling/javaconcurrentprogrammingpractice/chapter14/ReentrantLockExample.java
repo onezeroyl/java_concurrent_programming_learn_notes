@@ -1,4 +1,4 @@
-package com.yiling.javaconcurrentprogrammingpractice.chatper14;
+package com.yiling.javaconcurrentprogrammingpractice.chapter14;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
